@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="questionItemModel"
+            type="com.example.one.data.model.QuestionModel.QuestionItemModel" />
+        <variable
+            name="item"
+            type="String" />
+        <variable
+            name="title"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color_white"
+        bindDetailsItem="@{item}"
+        bindDetailsTitle="@{title}"
+        bindDetailsId="@{questionItemModel.QId}">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:shapeAppearanceOverlay="@style/roundedCornerImageStyle"
+            bindingAvator="@{questionItemModel.QImgUrl}"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/txt_color"
+                android:textSize="14sp"
+                android:text="@{questionItemModel.QTitle}"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/txt_sub_color"
+                android:textSize="12sp"
+                android:text="@{questionItemModel.QSubTitle}"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="serializeViewModel"
+            type="com.example.one.ui.serialize.SerizlizeViewModel" />
+        <variable
+            name="serializeAdapter"
+            type="com.example.one.ui.serialize.SerializeAdapter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/color_white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold">
+        </TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:bindSerializeAdapter="@{serializeAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:bindSerializeData="@{serializeViewModel.serialize.data}">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</layout>

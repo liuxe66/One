@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="txt_color">#48495F</color>
+    <color name="txt_sub_color">#797979</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+
+    <color name="color_item_home">#048be0</color>
+    <color name="color_item_question">#15c781</color>
+    <color name="color_item_serialize">#e8595e</color>
+
+    <color name="color_item_home_26">#26048be0</color>
+    <color name="color_item_question_26">#2615c781</color>
+    <color name="color_item_serialize_26">#26e8595e</color>
+    <color name="color_bg">#f5f5f5</color>
+
+</resources>
